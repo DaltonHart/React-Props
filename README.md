@@ -1,68 +1,78 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> **React** Props
 
-## Available Scripts
+### LEARNING OBJECTIVES
 
-In the project directory, you can run:
+_After this lesson, you will be able to:_
 
-### `npm start`
+- You will understand the basics of React Props.
+- Will understand how data flows through-out a React application.
+- Have a stronger understanding of the Parent Child relationship.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### STUDENT PRE-WORK
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+_Before this lesson, you should already be able to:_
 
-### `npm test`
+- Have a clear understanding of the basics of React and how to start an applicaton.
+- Will be able to break a site down into components and understand seperation of concerns via the component methodology.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What are props?
 
-### `npm run build`
+Up to this point we have made created react application and reformatted HTML into react components. We have also learned that we can dynamically alternate between components with the React Virtual Dom. But, with that seperation comes an issue. How do we share data between these componeents? Props to the rescue!
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Props = Properties
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Props is a short hand way of saying properties. By assigning a Property to a compenent we are giving it an attribute with value. Let's look at an HTML element real quick.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```html
+<div class="greeting">Hello</div>
+```
 
-### `npm run eject`
+The `class` part of the html is a property of the html element. We are basically creating a KEY:Value pair for the HTML element. So what would this basically look like in JS?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```js
+let div = {
+	type: 'div',
+	innerText: 'Hello',
+	class: ['greeting']
+};
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Now let's look at a react component.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```js
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+render() {
+  let greeting = 'hello'
+	return (
+			<Card data={greeting} />
+	);
+}
+```
 
-## Learn More
+We have created a Property called `data` and gave it a value of the greeting variable.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+So if we break down the component as an object it would like this.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```js
+let Card = {
+	type: 'react component',
+	data: 'hello'
+};
+```
 
-### Code Splitting
+### ACTIVITY 2-min
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Now that you can see the properties as an object. What other type of data can we store in a prop?
 
-### Analyzing the Bundle Size
+### Now what?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Since we can now assing properties how can we access them?
 
-### Making a Progressive Web App
+To practice assigning Props and using them we will use an existing application.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```bash
+$ git clone
+$ cd React-Props
+$ npm i
+$ npm start
+```
