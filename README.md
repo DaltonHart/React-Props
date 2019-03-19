@@ -62,8 +62,7 @@ let Card = {
 
 <details>
 <summary>Your reaction.</summary>
-<br>
-![Whoa](https://media.giphy.com/media/AVBo5eqFXd3SU/giphy.gif)
+<img src="https://media.giphy.com/media/AVBo5eqFXd3SU/giphy.gif"/>
 <details>
 
 ### ACTIVITY 2-min
