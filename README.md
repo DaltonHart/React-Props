@@ -61,8 +61,8 @@ let Card = {
 ```
 
 <details>
-<summary>Your reaction.</summary>
-<img src="https://media.giphy.com/media/AVBo5eqFXd3SU/giphy.gif"/>
+  <summary>Your reaction.</summary>
+  <img src="https://media.giphy.com/media/AVBo5eqFXd3SU/giphy.gif"/>
 </details>
 
 ### ACTIVITY 2-min
@@ -83,3 +83,5 @@ $ npm start
 ```
 
 You can see in our file structure two main components. App and Card.
+
+For this code along we will taking the data from App and passing it down to Card to display the info.
