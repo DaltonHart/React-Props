@@ -44,7 +44,7 @@ Now let's look at a react component.
 render() {
   let greeting = 'hello'
 	return (
-			<Card data={greeting} />
+	<Card data={greeting} />
 	);
 }
 ```
