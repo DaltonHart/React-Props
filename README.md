@@ -27,7 +27,7 @@ Props is a short hand way of saying properties. By assigning a Property to a com
 <div class="greeting">Hello</div>
 ```
 
-The `class` part of the html is a property of the html element. We are basically creating a KEY:Value pair for the HTML element. So what would this basically look like in JS?
+The `class` part of the html is a property of the html element. We are basically creating a KEY:Value pair for the HTML element. So what would this look like in JS?
 
 ```js
 let div = {
@@ -60,15 +60,17 @@ let Card = {
 };
 ```
 
+![Whoa](https://media.giphy.com/media/AVBo5eqFXd3SU/giphy.gif)
+
 ### ACTIVITY 2-min
 
-Now that you can see the properties as an object. What other type of data can we store in a prop?
+Now that you can see the elements as an object and the properties as KEY:VALUE pairs. What other type of data can we store in a prop? Think of other examples of data you could assign.
 
-### Now what?
+### Now what? (Code Along)
 
-Since we can now assing properties how can we access them?
+Since we can now assign properties how can we access them?
 
-To practice assigning Props and using them we will use an existing application.
+To practice assigning and using Props we will use an existing application.
 
 ```bash
 $ git clone
@@ -76,3 +78,5 @@ $ cd React-Props
 $ npm i
 $ npm start
 ```
+
+You can see in our file structure two main components. App and Card.
