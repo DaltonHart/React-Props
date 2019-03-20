@@ -123,3 +123,9 @@ class Card extends Component {
 ```
 
 As you can see we access the props in Card and assign them to variables. We can then call those variables where ever we want to replace the info in our card.
+
+### Exercise 
+
+Now its time for you to customize your pokemon card. Create as many properties and you think you need inside of App.js and pass it down to Card.js. Have fun with it! 
+
+Bonus challenge: Think about how you can pass all of the properties you create as a single property to clean up your code.
