@@ -69,11 +69,13 @@ let Card = {
 
 Now that you can see the elements as an object and the properties as KEY:VALUE pairs. What other type of data can we store in a prop? Think of other examples of data you could assign.
 
-### Now what? (Code Along)
+## Who's that Pokemon? (Code Along)
+
+<img src='assets/pokemon.png' width="400px">
 
 Since we can now assign properties how can we access them?
 
-To practice assigning and using Props we will use an existing application.
+To practice assigning and using Props we will use an existing application and building out our own pokemon card.
 
 ```bash
 $ git clone
@@ -84,4 +86,41 @@ $ npm start
 
 You can see in our file structure two main components. App and Card.
 
-For this code along we will taking the data from App and passing it down to Card to display the info.
+For this code along we will taking the data from App and passing it down to Card and display the info.
+
+in App.js:
+
+```js
+class App extends Component {
+	render() {
+		let cardImg =
+			'http://cdn.shopify.com/s/files/1/1158/9490/products/C000001967-PAR-ZOOM_901de3fa-7c7f-488d-a993-4e17b40d2274_800x.jpg?v=1524058404';
+		let name = 'Name';
+		return (
+			<div className='App'>
+				<h1>Let's Make our Pokemon Card!</h1>
+				<Card cardImg={cardImg} name={name} />
+			</div>
+		);
+	}
+}
+
+export default App;
+```
+
+As you can see we are creating variables and assigning their value to the Card to create properties. Let's jump over to Card and see how we use this data.
+
+in Card.js:
+
+```js
+class Card extends Component {
+	render() {
+		const { cardImg, name } = this.props;
+		return (
+			<p className="alignleft">{name}</p>
+			<img src={cardImg} alt="pokemon" className="image-big" />
+		)
+	}
+```
+
+As you can see we access the props in Card and assign them to variables. We can then call those variables where ever we want to replace the info in our card.
