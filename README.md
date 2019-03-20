@@ -97,7 +97,7 @@ class App extends Component {
     let name = 'Name';
     return (
       <div className='App'>
-	<h1>Let's Make our Pokemon Card!</h1>
+	<h1>Lets Make our Pokemon Card!</h1>
 	<Card cardImg={cardImg} name={name} />
       </div>
 	);
